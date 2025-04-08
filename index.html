@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Saurabh Kuche Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <style>
+        /*======================================
+//--//-->   ABOUT
+======================================*/
+        
+        .about-mf .box-shadow-full {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        .about-mf .about-img {
+            margin-bottom: 2rem;
+        }
+        
+        .about-mf .about-img img {
+            margin-left: 10px;
+        }
+        
+        .skill-mf .progress {
+            /* background-color: #cde1f8; */
+            margin: .5rem 0 1.2rem 0;
+            border-radius: 0;
+            height: .7rem;
+        }
+        
+        .skill-mf .progress .progress-bar {
+            height: .7rem;
+            background-color: #ffbd39;
+        }
+        /* Animation styles */
+        
+        #typing-animation {
+            position: relative;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(20, end) infinite;
+        }
+        
+        #typing-animation:before {
+            content: "";
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #ccc;
+            animation: typing-cursor 0.5s ease-in-out infinite;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes typing-cursor {
+            from {
+                width: 5px;
+            }
+            to {
+                width: 0;
+            }
+        }
+        /* project image zoom effect */
+        
+        .zoom-effect {
+            overflow: hidden;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .zoom-effect:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Saurabh Kuche</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                    <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home-section" class="hero">
+        <div class="home-slider  owl-carousel">
+            <div class="slider-item ">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg2.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Hello!</span>
+                                <h1 class="mb-4 mt-3">I'm <span>Saurabh Kuche</span></h1>
+
+                                <!-- Element to contain animated typing -->
+                                <span id="typing-animation"></span>
+
+                                <script>
+                                    // Initialize the typing animation
+                                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                                    // Create an array of typing text
+                                    const typingTexts = [
+                                        'Aspiring Data Scientist',
+                                        'IITM BS Student  ',
+                                        'Technical Writer'
+                                    ];
+
+                                    // Create a function to display the typing animation for a given text
+                                    function playTypingAnimation(text) {
+                                        // Loop through each character and add it to the element
+                                        for (let i = 0; i < text.length; i++) {
+                                            setTimeout(() => {
+                                                typingAnimationElement.textContent += text[i];
+                                            }, i * 200); // Increase the delay to slow down the typing animation
+                                        }
+
+                                        // Once the animation is complete, reset the text and start over
+                                        setTimeout(() => {
+                                            typingAnimationElement.textContent = '';
+                                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                                        }, text.length * 200);
+                                    }
+
+                                    // Start the typing animation loop
+                                    playTypingAnimation(typingTexts[0]);
+                                </script>
+
+                                <br>
+                                <br>
+                                <h2>Aspiring Data Scientist</h2>
+                                <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                                <!-- <br> -->
+                                <p>
+                                    <a href="https://github.com/Sau2003" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                    <!-- <div class="row d-flex"> -->
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img-about img d-flex align-items-stretch">
+                            <div class="overlay">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="images/bg3.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Details next to profile image -->
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p><span class="title-s">Name: </span> <span>Saurabh Kuche</span></p>
+                                            <p><span class="title-s">Job Role: </span> <span>Data Scientist</span></p>
+                                            <p><span class="title-s">Experience: </span> <span>1 Year</span></p>
+                                            <p><span class="title-s">Address: </span> <span>Pune, India</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-mf">
+                                    <p class="title-s">Skills</p>
+                                    <span>SQL</span> <span class="pull-right">80%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <span>PYTHON</span> <span class="pull-right">90%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <span>Data Visualization</span> <span class="pull-right">90%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <span>Statistical Analysis</span> <span class="pull-right">85%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <span>Machine Learning</span> <span class="pull-right">90%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate">
+
+                                <h1 class="big">About</h1>
+                                <h2 class="mb-4">About Me</h2>
+
+                                <p>With a dual degree in Computer Engineering and Data Science, I bring a strong mix of software development fundamentals and analytical expertise. I’m currently pursuing a B.E. in Computer Engineering from JSPM RSCOE and
+                                    a B.Sc. in Data Science from IIT Madras. My passion lies in applying data-driven solutions to solve real-world problems — from predictive maintenance to traffic optimization and chat analytics. I am a 2× NPTEL Medalist
+                                    and 2X National-Level Project Competition Winner, with a proven track record of developing innovative and impactful projects. With hands-on experience in Python, machine learning, and data analysis, I’ve built models
+                                    that extract insights and optimize decision-making. I'm eager to contribute to challenging data science roles that require problem-solving, model-building, and critical thinking.</p>
+
+                                <ul class="about-info mt-4 px-md-0 px-2">
+                                    <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+                                    <li class="d-flex"><span>Domain of Pursuing:</span> <span>Data Science, Machine Learning, AI Engineering, Data Analytics</span></li>
+                                    <li class="d-flex"><span>Education:</span> <span>Dual Degree - B.E. in Computer Engineering (JSPM RSCOE) &amp; B.Sc. in Data Science (IIT Madras)</span></li>
+                                    <li class="d-flex"><span>Languages:</span> <span>Python, C++</span></li>
+                                    <li class="d-flex"><span>Tools &amp; Libraries:</span> <span>Pandas, NumPy, Scikit-Learn, OpenCV, Matplotlib, Seaborn, Colab, Jupyter</span></li>
+                                    <li class="d-flex"><span>Other Skills:</span> <span>Machine Learning, Git, Excel, Data Visualization, Model Deployment</span></li>
+                                    <li class="d-flex"><span>Interest:</span> <span>AI Research, Scalable ML Systems, Real-World Data Challenges</span></li>
+                                </ul>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                            <div class="text">
+                                <p class="mb-4">
+                                    <span class="number" data-number="5">0</span> <span>+</span>
+                                    <span>&nbsp; Projects completed</span>
+                                </p>
+                                <p><a href="https://www.linkedin.com/in/saurabh-kuche-725666256/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Resume</h1>
+                    <h2 class="mb-4">Resume</h2>
+                    <p>Driven Data Science enthusiast pursuing a Dual Degree in Computer Engineering and Data Science. Experienced in applying machine learning, statistical analysis, and software development to solve real-world problems across domains like
+                        predictive maintenance, traffic optimization, and chat analytics. 2× NPTEL Medalist and 2× National-Level Project Competition Winner with a strong foundation in Python, data analysis, and model building.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <h1 class="big-4">Experience</h1>
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">May 2024 – June 2024</span>
+                        <h2>Data Science Intern</h2>
+                        <span class="position">Altair (Virtual)</span>
+                        <p class="mt-4">
+                            Worked on real-time projects in data analysis and predictive modeling.
+                            <ul>
+                                <li>Built interactive dashboards and visualizations using Python, Matplotlib, Seaborn, and Tableau.</li>
+                                <li>Performed exploratory data analysis and implemented machine learning models to derive actionable insights from large datasets.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">April 2024 – May 2024</span>
+                        <h2>Data Visualization Intern</h2>
+                        <span class="position">Tata Group (Virtual)</span>
+                        <p class="mt-4">
+                            Participated in a job simulation project focused on business insights and effective decision-making.
+                            <ul>
+                                <li>Designed executive-level dashboards with meaningful KPIs and visual summaries.</li>
+                                <li>Formulated data-driven questions for leadership meetings to align strategies with data insights.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">January 2024 – March 2024</span>
+                        <h2>AI/ML Intern</h2>
+                        <span class="position">Google (Virtual)</span>
+                        <p class="mt-4">
+                            Focused on machine learning and computer vision applications.
+                            <ul>
+                                <li>Built Android-based applications using ML algorithms and Google tools.</li>
+                                <li>Gained hands-on experience in real-world AI problem-solving for better user engagement.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <h1 class="big-4">Education</h1>
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2022 – Ongoing</span>
+                        <h2>B.Tech. in Computer Engineering</h2>
+                        <span class="position">JSPM’s Rajarshi Shahu College of Engineering, Pune</span>
+                        <p class="mt-4">Grade: First Class with Distinction<br>Affiliated to Savitribai Phule Pune University</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="resume-wrap ftco-animate">
+                        <span class="date">2024 – Ongoing</span>
+                        <h2>B.Sc. in Data Science and Programming</h2>
+                        <span class="position">Indian Institute of Technology (IIT) Madras</span>
+                        <p class="mt-4">Currently pursuing – Dual Degree program focused on Data Science and Programming.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 text-center ftco-animate">
+                    <p><a href="assets/Resume_DST.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-section" id="project-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Projects</h1>
+                    <h2 class="mb-4">Projects</h2>
+                    <p>Below are some of my Data Science and AI projects developed using Python, Machine Learning.</p>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="GoFarm">
+                        <a href="https://github.com/Sau2003/Go-Farm" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+
+                            <h3 class="heading"><a href="#">GoFarm - AI-Powered Agricultural Price Prediction</a></h3>
+                            <p>Developed an AI-powered system to forecast agricultural commodity prices using machine learning. Integrated blockchain for secure transactions, Flask APIs for deployment, and multilingual support for seamless trade and quality
+                                assessment.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="WhatsApp Chat Analyzer">
+                        <a href="https://github.com/Sau2003/Whatsapp_Chat_Analysis" class="block-20 zoom-effect" style="background-image: url('images/img2.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+
+                            <h3 class="heading"><a href="#">WhatsApp Chat Analyzer</a></h3>
+                            <p> Developed a web-based application to analyze WhatsApp chat data using Python and Machine Learning. Provided detailed insights such as most active users, message trends, and media statistics. Integrated Flask for the frontend,
+                                and delivered results via a clean, interactive UI.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="Weather Forecasting Application">
+                        <a href="https://github.com/Sau2003/Weather-Forecasting-API" class="block-20 zoom-effect" style="background-image: url('images/image.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+
+                            <h3 class="heading"><a href="#">Weather Forecasting Application</a></h3>
+                            <p>Developed a Python-based weather app capable of forecasting up to 10 days in advance. Integrated real-time weather APIs for live updates and implemented data visualization using Matplotlib and Seaborn. Designed a sleek GUI
+                                using Tkinter, incorporated a subscription feature for daily email weather alerts, and applied OOP principles for better modularity and code maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- added justify-content-center to center align the last two projects -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="SereniPulse: A Stress Level Predictor">
+                        <a href="https://github.com/Sau2003/Stress-Classification-using-EDA" class="block-20 zoom-effect" style="background-image: url('images/stress.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+
+                            <h3 class="heading"><a href="#">SereniPulse: A Stress Level Predictor</a></h3>
+                            <p>Developed a machine learning-based solution to predict stress levels using a custom-built dataset. Performed exploratory data analysis (EDA), feature engineering, and model evaluation to ensure accurate predictions. The project
+                                gained recognition through blog posts, presentations, and a special mention in the college magazine for its social relevance and technical execution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="Smart Grid Optimization">
+                        <a href="https://github.com/Sau2003/Smart-grid-optimization-" class="block-20 zoom-effect" style="background-image: url('images/smart.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+
+                            <h3 class="heading"><a href="#">Smart Grid Optimization</a></h3>
+                            <p>Applied machine learning techniques to improve the efficiency and stability of smart energy grids. Enhanced power forecasting and resource allocation strategies to enable more sustainable energy distribution. Contributed to
+                                operational efficiency and grid stability for modern energy systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section" id="blogs-section">
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Blogs</h1>
+                    <h2 class="mb-4">Blogs Written by Me</h2>
+                    <p>Here are some of the blogs I've written about tech, data science, and development.</p>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <!-- Blog 1 -->
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="https://saurabhkucheblog.blogspot.com/2023/09/exploratory-data-analysis-on-stress.html" class="block-20" style="background-image: url('images/3-idiots.png');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <h3 class="heading">
+                                <a href="https://saurabhkucheblog.blogspot.com/2023/09/exploratory-data-analysis-on-stress.html">EDA on Stress data</a>
+                            </h3>
+                            <p>Conducted an Exploratory Data Analysis (EDA) on student stress factors using a self-collected dataset from colleges in Pune. Analyzed key variables such as academic and financial pressure, sleep, time management, class interaction,
+                                and attendance-related stress using Python libraries like Seaborn and Matplotlib. Identified strong correlations between financial stress and sleep deprivation, as well as time management issues. Key findings revealed that
+                                strict attendance policies and assignment deadlines were major contributors to student stress.</p>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-md-flex align-items-center">
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="10">0</strong>
+                            <span>Achievements</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="10">0</strong>
+                            <span>Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                        <div class="text">
+                            <strong class="number" data-number="500">0</strong>
+                            <span>Mentored Students</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+                <!-- <div class="container"> -->
+                <div class="row justify-content-center">
+                    <div class="col-md-7 ftco-animate text-center">
+                        <h2>More projects on Github </span>
+                        </h2>
+                        <div class="heading">
+                            <h4>I thrive on decoding data, solving complex problems, and building smart AI-driven solutions</h4>
+
+                            <br>
+                            <p><a href="https://github.com/Sau2003" class="btn btn-primary py-3 px-5">GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+    </section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-4 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Contact</h1>
+                    <h2 class="mb-4">Contact Me</h2>
+                    <p>Below are the details to reach out to me!</p>
+                </div>
+            </div>
+
+            <div class="row d-flex contact-info mb-5">
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-map-signs"></span>
+                        </div>
+                        <h3 class="mb-4">Address</h3>
+                        <p>Pune, India</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-phone2"></span>
+                        </div>
+                        <h3 class="mb-4">Contact Number</h3>
+                        <p><a href="tel://0101010101">+ 91 9130716849</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box p-4 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="icon-paper-plane"></span>
+                        </div>
+                        <h3 class="mb-4">Email Address</h3>
+                        <p><a href="mailto:info@yoursite.com">saurabhkuche2@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <br>
+                    <br>
+                    <h2 class="mb-4"></h2>
+                    <br>
+                    <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                        <li class="ftco-animate normal-txt">Find me on </li>
+
+                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/saurabh-kuche-725666256/"><span class="icon-linkedin"></span></a></li>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
